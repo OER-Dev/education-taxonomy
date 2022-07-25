@@ -10,10 +10,10 @@ const cors = initMiddleware(
         methods: ['GET', 'POST', 'OPTIONS'],
     })
 )
-export default function handler(req, res) {
+export default async function handler(req, res) {
      // Run cors
      await cors(req, res)
-     
+
      // Rest of the API logic
     res.status(200).json(maintopic)
 }
